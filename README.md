@@ -1,2 +1,2 @@
 # JavaScript-Exercises
-Free Code Camp JavaScript
+FreeCodeCamp JavaScript Exercises
