@@ -1,0 +1,40 @@
+function mutation(arr) {
+
+  let first = [];
+  let second = [];
+  let p = false;
+  let matched = [];
+
+  for(let i = 0; i < arr[0].length; i++){
+    if(!first.includes(arr[0][i])){
+      first.push(arr[0][i].toLowerCase());
+    }
+  }
+
+   for(let i = 0; i < arr[1].length; i++){
+    if(!second.includes(arr[1][i])){
+      second.push(arr[1][i].toLowerCase());
+    }
+  }
+
+  for(let i = 0; i < first.length; i++){
+    for(let j = 0; j < second.length; j++){
+      p = second[j].toLowerCase() == first[i].toLowerCase(); 
+      if(p){
+        if(!matched.includes(second[j])){
+          matched.push(second[j].toLowerCase());
+        }
+      }             
+    }    
+  }
+
+  if(matched.length == second.length){
+    return true;
+  }
+
+  return false;
+}
+
+mutation(["hello", "hey"]);
+mutation(["hello", "Hello"])
+mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]);
