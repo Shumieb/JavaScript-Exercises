@@ -1,0 +1,29 @@
+function sumAll(arr) {
+  let largestNum = 0;
+  let largestNumIndex = 0;
+  let smallestNumIndex = 0;
+
+  for(let i=0; i<arr.length; i++){
+    if(arr[i] > largestNum){
+      largestNum = arr[i];
+      largestNumIndex = i;
+    }
+  }
+
+  if(largestNumIndex === 0){
+    smallestNumIndex = 1;
+  }else{
+    smallestNumIndex = 0
+  }
+
+  let sum = 0;
+
+  for(let i=arr[smallestNumIndex]; i <= arr[largestNumIndex]; i++){
+    sum+=i;
+  }
+
+
+  return sum;
+}
+
+sumAll([1, 4]);
